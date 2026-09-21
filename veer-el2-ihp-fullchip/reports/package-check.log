@@ -1,0 +1,15 @@
+Syntax PASS: scripts/check_schema.py
+Syntax PASS: scripts/run_elaboration.py
+Syntax PASS: scripts/verify_manifest.py
+Syntax PASS: scripts/preflight.py
+Syntax PASS: scripts/collect_metrics.py
+Syntax PASS: scripts/check_config.py
+Syntax PASS: scripts/run_sim.py
+Syntax PASS: scripts/check_pdk.py
+Syntax PASS: scripts/gen_rom.py
+Syntax PASS: scripts/run_gl.py
+Makefile expansion PASS
+python3 scripts/check_pdk.py --pdk-root "/workspace/scratch/1aa11c9270f0/veer-el2-ihp-fullchip/IHP-Open-PDK"
+python3 scripts/check_config.py --pdk-root "/workspace/scratch/1aa11c9270f0/veer-el2-ihp-fullchip/IHP-Open-PDK"
+python3 -m librelane --pdk ihp-sg13g2 --pdk-root "/workspace/scratch/1aa11c9270f0/veer-el2-ihp-fullchip/IHP-Open-PDK" --manual-pdk --save-views-to final librelane/config.yaml
+

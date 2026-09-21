@@ -1,0 +1,137 @@
+meta:
+  version: 3
+  flow: Chip
+DESIGN_NAME: chip_top
+VERILOG_FILES:
+- dir::../vendor/el2/design/include/el2_def.sv
+- dir::../vendor/el2/design/lib/el2_mem_if.sv
+- dir::../vendor/el2/design/lib/el2_assert.sv
+- dir::../vendor/el2/design/el2_mubi_pkg.sv
+- dir::../vendor/el2/design/el2_veer_wrapper.sv
+- dir::../vendor/el2/design/el2_lockstep_pkg.sv
+- dir::../vendor/el2/design/el2_veer_lockstep.sv
+- dir::../vendor/el2/design/el2_mem.sv
+- dir::../vendor/el2/design/el2_pic_ctrl.sv
+- dir::../vendor/el2/design/el2_veer.sv
+- dir::../vendor/el2/design/el2_dma_ctrl.sv
+- dir::../vendor/el2/design/el2_pmp.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_aln_ctl.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_compress_ctl.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_ifc_ctl.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_bp_ctl.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_ic_mem.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_mem_ctl.sv
+- dir::../vendor/el2/design/ifu/el2_ifu_iccm_mem.sv
+- dir::../vendor/el2/design/ifu/el2_ifu.sv
+- dir::../vendor/el2/design/dec/el2_dec_decode_ctl.sv
+- dir::../vendor/el2/design/dec/el2_dec_gpr_ctl.sv
+- dir::../vendor/el2/design/dec/el2_dec_ib_ctl.sv
+- dir::../vendor/el2/design/dec/el2_dec_pmp_ctl.sv
+- dir::../vendor/el2/design/dec/el2_dec_tlu_ctl.sv
+- dir::../vendor/el2/design/dec/el2_dec_trigger.sv
+- dir::../vendor/el2/design/dec/el2_dec.sv
+- dir::../vendor/el2/design/exu/el2_exu_alu_ctl.sv
+- dir::../vendor/el2/design/exu/el2_exu_mul_ctl.sv
+- dir::../vendor/el2/design/exu/el2_exu_div_ctl.sv
+- dir::../vendor/el2/design/exu/el2_exu.sv
+- dir::../vendor/el2/design/lsu/el2_lsu.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_clkdomain.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_addrcheck.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_lsc_ctl.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_stbuf.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_bus_buffer.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_bus_intf.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_ecc.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_dccm_mem.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_dccm_ctl.sv
+- dir::../vendor/el2/design/lsu/el2_lsu_trigger.sv
+- dir::../vendor/el2/design/dbg/el2_dbg.sv
+- dir::../vendor/el2/design/dmi/dmi_mux.v
+- dir::../vendor/el2/design/dmi/dmi_wrapper.v
+- dir::../vendor/el2/design/dmi/dmi_jtag_to_core_sync.v
+- dir::../vendor/el2/design/dmi/rvjtag_tap.v
+- dir::../vendor/el2/design/lib/el2_lib.sv
+- dir::../vendor/el2/design/lib/el2_prim_generic_buf.sv
+- dir::../vendor/el2/design/lib/el2_prim_buf.sv
+- dir::../vendor/el2/design/lib/beh_lib.sv
+- dir::../vendor/el2/design/lib/mem_lib.sv
+- dir::../vendor/el2/design/lib/ahb_to_axi4.sv
+- dir::../vendor/el2/design/lib/axi4_to_ahb.sv
+- dir::../src/ahb_mem.sv
+- dir::../src/el2_soc.sv
+- dir::../src/chip_core.sv
+- dir::../src/chip_top.sv
+VERILOG_DEFINES:
+- FUNCTIONAL
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+PAD_SOUTH:
+- clk_pad
+- rst_n_pad
+- vdd_pad
+- vss_pad
+PAD_EAST:
+- in0_pad
+- in1_pad
+- in2_pad
+- in3_pad
+PAD_NORTH:
+- out0_pad
+- out1_pad
+- out2_pad
+- out3_pad
+- out4_pad
+- out5_pad
+- out6_pad
+- out7_pad
+- iovdd_pad
+- iovss_pad
+PAD_WEST:
+- in4_pad
+- in5_pad
+- in6_pad
+- in7_pad
+PNR_SDC_FILE: dir::chip_top.sdc
+SIGNOFF_SDC_FILE: dir::chip_top.sdc
+FALLBACK_SDC: dir::chip_top.sdc
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+CLOCK_PORT: clk_PAD
+CLOCK_NET: clk_pad/p2c
+CLOCK_PERIOD: 20
+FP_SIZING: absolute
+DIE_AREA:
+- 0
+- 0
+- 1600
+- 1600
+CORE_AREA:
+- 365
+- 365
+- 1235
+- 1235
+PL_TARGET_DENSITY_PCT: 35
+GRT_ALLOW_CONGESTION: false
+PDN_CORE_RING: true
+PAD_BONDPAD_NAME: bondpad_70x70_novias
+EXTRA_GDS:
+- dir::../ip/bondpad_70x70_novias/gds/bondpad_70x70_novias.gds
+EXTRA_LEFS:
+- dir::../ip/bondpad_70x70_novias/lef/bondpad_70x70_novias.lef
+IGNORE_DISCONNECTED_MODULES:
+- bondpad_70x70_novias
+PDN_CORE_RING_VWIDTH: 15
+PDN_CORE_RING_HWIDTH: 15
+PDN_CORE_RING_VSPACING: 5
+PDN_CORE_RING_HSPACING: 5
+PDN_CORE_RING_CONNECT_TO_PADS: true
+PDN_ENABLE_PINS: false
+MAGIC_EXT_UNIQUE: notopports
+VERILOG_INCLUDE_DIRS:
+- dir::../snapshots/baseline
+- dir::../vendor/el2/design/include
+- dir::../src
+USE_SLANG: true
+SLANG_ARGUMENTS:
+- --single-unit

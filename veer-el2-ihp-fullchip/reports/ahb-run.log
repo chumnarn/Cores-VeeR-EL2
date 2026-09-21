@@ -1,0 +1,5 @@
+PASS: AHB 64-bit, byte/halfword, pipelining, GPIO, 2-cycle ERROR and recovery
+- sim/tb_ahb.sv:48: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.49
+- Verilator: $finish at 520ns; walltime 0.000 s; speed 7.524 ms/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 6 MB

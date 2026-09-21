@@ -1,0 +1,4 @@
+LibreLane 3.0.0
+PASS: all YAML keys are registered in Chip flow
+PASS: Yosys.Synthesis, OpenROAD.GeneratePDN, OpenROAD.CTS, OpenROAD.DetailedRouting exist
+Scope: key registry and stage IDs only; not a PDK-aware config load

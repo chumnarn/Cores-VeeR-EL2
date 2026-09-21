@@ -1,0 +1,4 @@
+PASS: required source/include paths and ROM size checked
+PASS: 22 explicit RTL pad instances match unique YAML pad lists
+PASS: AHB, disabled ICCM/DCCM/I-cache and FPGA_OPTIMIZE baseline
+Physical tools and PDK not available as a complete implementation environment
