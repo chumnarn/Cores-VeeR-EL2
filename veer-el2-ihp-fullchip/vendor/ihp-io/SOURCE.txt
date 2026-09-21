@@ -1,0 +1,3 @@
+Simulation/reference only; synthesis uses installed PDK.
+https://github.com/IHP-GmbH/IHP-Open-PDK
+Commit: 5e6d592e4002946a4616f798c357f0f3c06cf3b6
