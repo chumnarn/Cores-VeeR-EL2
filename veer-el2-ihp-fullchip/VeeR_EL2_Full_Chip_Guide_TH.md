@@ -6,7 +6,7 @@
 โครงการ: `veer-el2-ihp-fullchip`  
 ไฟล์หลัก: `librelane/config.yaml`
 
-> **ขอบเขตผลตรวจสอบ:** ชุดนี้มี RTL, firmware, testbench, environment lock, configuration และคำสั่ง flow พร้อมใช้งานหลังติดตั้ง dependencies/PDK ผ่านการจำลอง EL2 และการตรวจโครงสร้างด้วย Yosys/Slang แล้ว แต่ยังไม่ได้รัน technology mapping, place-and-route, sign-off STA, DRC หรือ LVS ในสภาพแวดล้อมที่จัดทำเอกสาร จึงยังไม่ใช่ GDSII ที่ผ่าน sign-off อ่าน `VALIDATION.md` ก่อนเริ่มงาน
+> **ขอบเขตผลตรวจสอบ:** ชุดนี้มี RTL, firmware, testbench, environment lock, configuration และคำสั่ง flow พร้อมใช้งานหลังติดตั้ง dependencies/PDK ผ่านการจำลอง EL2 และการตรวจโครงสร้างด้วย Yosys/Slang แล้ว แต่ยังไม่ได้รัน technology mapping, place-and-route, sign-off STA, DRC หรือ LVS ในสภาพแวดล้อมที่จัดทำเอกสารนี้ จึงยังไม่ใช่ GDSII ที่ผ่าน sign-off อ่าน `VALIDATION.md` ก่อนเริ่มงาน
 
 ## สารบัญ
 
