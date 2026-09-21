@@ -834,7 +834,7 @@ Baseline ผูก TCK ต่ำและ TRST asserted พร้อม tie-offs
 
 ใช้ source revisions ใน lock เป็นหลักสำหรับ API ที่แพ็กเกจนี้อ้างอิง:
 
-1. [VeeR EL2 repository ของอาจารย์](https://github.com/chumnarn/Cores-VeeR-EL2/)
+1. [VeeR EL2 repository](https://github.com/chumnarn/Cores-VeeR-EL2/)
 2. [EL2 wrapper ที่ตรึง revision](https://github.com/chumnarn/Cores-VeeR-EL2/blob/925f3a34bdadc8f28b12a70cfb73e043b0f5ef3d/design/el2_veer_wrapper.sv)
 3. [EL2 configuration generator](https://github.com/chumnarn/Cores-VeeR-EL2/blob/925f3a34bdadc8f28b12a70cfb73e043b0f5ef3d/configs/veer.config)
 4. [IHP full-chip template](https://github.com/IHP-GmbH/ihp-sg13g2-librelane-template)
@@ -843,4 +843,3 @@ Baseline ผูก TCK ต่ำและ TRST asserted พร้อม tie-offs
 7. [LibreLane documentation](https://librelane.readthedocs.io/)
 8. [IHP Open PDK](https://github.com/IHP-GmbH/IHP-Open-PDK)
 
-เอกสาร online อาจเปลี่ยนตาม branch จึงควรบันทึก revision ที่ใช้จริงทุกครั้งที่ปรับปรุงหลักสูตรหรือ rerun โครงการ
