@@ -1,0 +1,12 @@
+{
+  "el2": {
+    "url": "https://github.com/chumnarn/Cores-VeeR-EL2",
+    "commit": "925f3a34bdadc8f28b12a70cfb73e043b0f5ef3d"
+  },
+  "template": {
+    "url": "https://github.com/IHP-GmbH/ihp-sg13g2-librelane-template",
+    "commit": "0418301723d86133de686ef743cfd668bb3d11d4"
+  },
+  "librelane": "3.0.0",
+  "pdk_ciel": "3b5a704ba6738aa686b08706187830e6284d2a10"
+}
