@@ -52,6 +52,7 @@
           default = pkgs.librelane-shell.override ({
             extra-packages = with pkgs; [
               # Utilities
+               gcc
               (perl.withPackages (ps: [ ps.JSON ]))
               gnumake
               gnugrep
