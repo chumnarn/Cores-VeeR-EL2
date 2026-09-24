@@ -222,7 +222,6 @@ end
 */
 
 
-
 genvar i ;
 genvar p ;
 for (p=0; p<=INT_ENABLE_GRPS ; p++) begin  : IO_CLK_GRP
@@ -254,12 +253,6 @@ wire grp_clk, grp_clken;
 end
 
 
-
-
-
-
-
-
 for (i=0; i<pt.PIC_TOTAL_INT_PLUS1 ; i++) begin  : SETREG
 
  if (i > 0 ) begin : NON_ZERO_INT
@@ -289,9 +282,6 @@ for (i=0; i<pt.PIC_TOTAL_INT_PLUS1 ; i++) begin  : SETREG
       .dout        (extintsrc_req_sync[i]),
       .din         (extintsrc_req[i]),
       .*) ;
-
-
-
 
 
         el2_configurable_gw config_gw_inst(.*,
@@ -435,7 +425,6 @@ else begin : genblock
 end
 
 
-
 ///////////////////////////////////////////////////////////////////////
 // Config Reg`
 ///////////////////////////////////////////////////////////////////////
@@ -446,7 +435,6 @@ assign config_reg_in  =  picm_wr_data_ff[0] ;   //
 rvdffs #(1) config_reg_ff  (.*, .clk(free_clk), .en(config_reg_we), .din (config_reg_in), .dout(config_reg));
 
 assign intpriord  = config_reg ;
-
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -470,9 +458,6 @@ rvdff #(1) mexintpend_ff  (.*, .clk(free_clk), .din (mexintpend_in), .dout(mexin
 assign maxint[INTPRIORITY_BITS-1:0]      =  intpriord ? 0 : 15 ;
 assign mhwakeup_in = ( pl_in_q[INTPRIORITY_BITS-1:0] == maxint) ;
 rvdff #(1) wake_up_ff  (.*, .clk(free_clk), .din (mhwakeup_in), .dout(mhwakeup));
-
-
-
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -598,12 +583,4 @@ module el2_configurable_gw (
   assign extintsrc_req_config =  meigwctrl_type ? ((extintsrc_req_sync ^  meigwctrl_polarity) | gw_int_pending) : (extintsrc_req_sync ^  meigwctrl_polarity) ;
 
 endmodule // configurable_gw
-
-
-
-
-
-
-
-
 
