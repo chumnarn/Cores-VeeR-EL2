@@ -514,8 +514,14 @@ assign intpend_reg_extended[INTPEND_SIZE-1:0]  = {{INTPEND_SIZE-pt.PIC_TOTAL_INT
               end
          end
    end
-
-
+ 
+ // correct mask[3:0] has no driver
+assign mask[3] = raddr_config_gw_base_match;
+assign mask[2] = raddr_intenable_base_match
+               | raddr_config_pic_match;
+assign mask[1] = raddr_intpriority_base_match;
+assign mask[0] = ~(mask[3] | mask[2] | mask[1]);
+//
  assign picm_rd_data_in[31:0] = ({32{intpend_reg_read      }} &   intpend_rd_out                                                    ) |
                                 ({32{intpriority_reg_read  }} &  {{32-INTPRIORITY_BITS{1'b0}}, intpriority_rd_out                 } ) |
                                 ({32{intenable_reg_read    }} &  {31'b0 , intenable_rd_out                                        } ) |
